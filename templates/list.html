@@ -14,7 +14,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">To-Do List</a>
+            <a class="navbar-brand" href="#">Keep Notes</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -22,17 +22,52 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/">Add a Task</a>
+                        <a class="nav-link" aria-current="page" href="/">Add a Note</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/list">View Tasks</a>
+                        <a class="nav-link active" href="/list">View Notes</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <div id="main">
-        <h1>Your Tasks are: </h1>
+        <h1 style="text-align: center;">Your Notes are: </h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, ducimus.</td>
+                    <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit labore qui sunt sed maxime
+                        consequuntur voluptatibus eos ducimus error. Libero ducimus recusandae consectetur
+                        necessitatibus quod quam omnis nostrum voluptatem? Vitae doloremque ratione voluptas dolor
+                        itaque.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae eius voluptas pariatur, nobis
+                        eveniet libero? Fugit enim quis inventore! Sapiente iusto eveniet illum cumque, animi deleniti
+                        odit quo nulla, consectetur, obcaecati veritatis? Dolores suscipit, quia architecto, magni, unde
+                        deserunt iure rem molestiae possimus quas quis nulla delectus sapiente! Officia sit temporibus,
+                        dolorum labore dolore vitae!
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                </tr>
+                <tr>ˀ
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 
