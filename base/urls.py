@@ -21,5 +21,6 @@ from . import views
 
 urlpatterns = [
     path('',views.home, name='home'),
-    path('list',views.list, name='list')
+    path('list',views.list, name='list'),
+    path('delete-note/<int:id>',views.delete_note, name='delete_note')
 ]

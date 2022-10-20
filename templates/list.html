@@ -40,6 +40,8 @@
                     <th scope="col">Title</th>
                     <th scope="col">Description</th>
                     <th scope="col">Date Created</th>
+                    <th scope="col">Update/ Delete</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -50,6 +52,8 @@
                     <td>{{notes.noteTitle}}</td>
                     <td>{{notes.noteDesc}}</td>
                     <td>{{notes.time}}</td>
+                    <td><a href="delete-note/{{notes.id}}" class="btn btn-danger">Delete</a>
+                    </td>
                 </tr>
                 {%endfor%}
             </tbody>
