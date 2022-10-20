@@ -39,33 +39,19 @@
                     <th scope="col">#</th>
                     <th scope="col">Title</th>
                     <th scope="col">Description</th>
+                    <th scope="col">Date Created</th>
                 </tr>
             </thead>
             <tbody>
+                {%for notes in list%}
+
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, ducimus.</td>
-                    <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit labore qui sunt sed maxime
-                        consequuntur voluptatibus eos ducimus error. Libero ducimus recusandae consectetur
-                        necessitatibus quod quam omnis nostrum voluptatem? Vitae doloremque ratione voluptas dolor
-                        itaque.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae eius voluptas pariatur, nobis
-                        eveniet libero? Fugit enim quis inventore! Sapiente iusto eveniet illum cumque, animi deleniti
-                        odit quo nulla, consectetur, obcaecati veritatis? Dolores suscipit, quia architecto, magni, unde
-                        deserunt iure rem molestiae possimus quas quis nulla delectus sapiente! Officia sit temporibus,
-                        dolorum labore dolore vitae!
-                    </td>
+                    <th scope="row">{{forloop.counter}}</th>
+                    <td>{{notes.noteTitle}}</td>
+                    <td>{{notes.noteDesc}}</td>
+                    <td>{{notes.time}}</td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                </tr>
-                <tr>ˀ
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                </tr>
+                {%endfor%}
             </tbody>
         </table>
     </div>
