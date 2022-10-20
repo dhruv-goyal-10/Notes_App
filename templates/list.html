@@ -60,7 +60,7 @@
                         <a href="delete_note/{{notes.id}}" class="btn btn-danger">Delete</a>
                         <a href="update_note/{{notes.id}}" class="btn btn-primary">Update</a>
                     </td>
-                    <td>{{notes.bookmark}}
+                    <td>
                         {%if notes.bookmark == 0 %}
                             <a href="/bookmark/{{notes.id}}" class="btn btn-secondary">Add to Bookmarks</a>
                         {%else%}

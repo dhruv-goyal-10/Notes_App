@@ -8,7 +8,7 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <title> Bookmarks</title>t</title>
+    <title> Bookmarks</title>
 </head>
 
 <body>
@@ -44,6 +44,8 @@
                     <th scope="col">Description</th>
                     <th scope="col">Date Created</th>
                     <th scope="col">Update/ Delete</th>
+                    <th scope="col">Bookmarks</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -58,6 +60,7 @@
                                 <a href="delete_note/{{notes.id}}" class="btn btn-danger">Delete</a>
                                 <a href="update_note/{{notes.id}}" class="btn btn-primary">Update</a>
                             </td>
+                            <td><a href="/updatebookmarks/{{notes.id}}" class="btn btn-warning">Remove from Bookmarks</a></td>
                         </tr>
                     {%endif%}
                 {%endfor%}

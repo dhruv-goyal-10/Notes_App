@@ -27,5 +27,5 @@ urlpatterns = [
     path('saved/<int:id>',views.save_changes, name='save_changes'),
     path('bookmark/<int:id>',views.bookmark),
     path('viewbookmarks',views.viewbookmarks),
-
+    path('updatebookmarks/<int:id>',views.updatebookmarks),
 ]

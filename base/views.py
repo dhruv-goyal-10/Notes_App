@@ -59,3 +59,11 @@ def viewbookmarks(request):
     # print(allNotes)
     list={'list': allNotes}
     return(render(request,'bookmarks.html', list))
+
+def updatebookmarks(request,id):
+    temp=Addnote.objects.get(pk =id)
+    temp.bookmark=0
+    temp.save()
+    allNotes=Addnote.objects.all()
+    list={'list': allNotes}
+    return(render(request,'bookmarks.html', list))
