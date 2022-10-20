@@ -14,7 +14,7 @@ def home(request):
 
 def list(request):
     allNotes=Addnote.objects.all()
-    print(allNotes)
+    # print(allNotes)
     list={'list': allNotes}
     return(render(request,'list.html', list))
 
@@ -45,8 +45,17 @@ def save_changes(request,id):
     '''
     return HttpResponse(s)
 
+def bookmark(request,id):
+    temp=Addnote.objects.get(pk =id)
+    temp.bookmark=1
+    temp.save()
+    allNotes=Addnote.objects.all()
+    # print(allNotes)
+    list={'list': allNotes}
+    return(render(request,'list.html', list))
 
-
-    
-     
- 
+def viewbookmarks(request):
+    allNotes=Addnote.objects.all()
+    # print(allNotes)
+    list={'list': allNotes}
+    return(render(request,'bookmarks.html', list))
