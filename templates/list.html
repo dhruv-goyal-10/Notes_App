@@ -52,7 +52,9 @@
                     <td>{{notes.noteTitle}}</td>
                     <td>{{notes.noteDesc}}</td>
                     <td>{{notes.time}}</td>
-                    <td><a href="delete-note/{{notes.id}}" class="btn btn-danger">Delete</a>
+                    <td>
+                        <a href="delete_note/{{notes.id}}" class="btn btn-danger">Delete</a>
+                        <a href="update_note/{{notes.id}}" class="btn btn-primary">Update</a>
                     </td>
                 </tr>
                 {%endfor%}

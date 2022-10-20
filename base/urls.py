@@ -22,5 +22,7 @@ from . import views
 urlpatterns = [
     path('',views.home, name='home'),
     path('list',views.list, name='list'),
-    path('delete-note/<int:id>',views.delete_note, name='delete_note')
+    path('delete_note/<int:id>',views.delete_note, name='delete_note'),
+    path('update_note/<int:id>',views.update_note, name='update_note'),
+    path('saved/<int:id>',views.save_changes, name='save_changes')
 ]
