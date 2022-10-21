@@ -35,8 +35,12 @@
         </div>
     </nav>
     <div id="main">
-        <h1 style="text-align: center;">Your Notes are: </h1>
-        <table class="table">
+        <h1 style="text-align: center;">Your Notes are : </h1>
+        <form method="GET" style="text-align:center; padding: 3px; margin-top: 2px;">
+            <input type="text" name="search-area" value="{{search_input}}">
+            <input type="submit" value="Search">
+        </form>
+        <table class="table"> 
             <thead>
                 <tr>
                     <th scope="col">#</th>

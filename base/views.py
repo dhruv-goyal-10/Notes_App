@@ -13,10 +13,13 @@ def home(request):
 
 
 def list(request):
-    allNotes=Addnote.objects.all()
+    search_input = request.GET.get('search-area') or ""
+    allNotes = Addnote.objects.filter(noteTitle__startswith=search_input)
     # print(allNotes)
-    list={'list': allNotes}
+    # print(search_input)
+    list={'list': allNotes, 'search_input': search_input}
     return(render(request,'list.html', list))
+
 
  
 def delete_note(request, id):
@@ -55,9 +58,9 @@ def bookmark(request,id):
     return(render(request,'list.html', list))
 
 def viewbookmarks(request):
-    allNotes=Addnote.objects.all()
-    # print(allNotes)
-    list={'list': allNotes}
+    search_input = request.GET.get('search-area') or ""
+    allNotes = Addnote.objects.filter(noteTitle__startswith=search_input)
+    list={'list': allNotes, 'search_input': search_input}
     return(render(request,'bookmarks.html', list))
 
 def updatebookmarks(request,id):

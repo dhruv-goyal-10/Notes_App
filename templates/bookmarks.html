@@ -35,7 +35,11 @@
         </div>
     </nav>
     <div id="main">
-        <h1 style="text-align: center;">Your Bookmarks are: </h1>
+        <h1 style="text-align: center;">Your Bookmarks are : </h1>
+        <form method="GET" style="text-align:center; padding: 3px; margin-top: 2px;">
+            <input type="text" name="search-area" value="{{search_input}}">
+            <input type="submit" value="Search">
+        </form>
         <table class="table">
             <thead>
                 <tr>
@@ -50,19 +54,19 @@
             </thead>
             <tbody>
                 {%for notes in list%}
-                    {%if notes.bookmark == 1 %}
-                        <tr>
-                            <th scope="row">{{forloop.counter}}</th>
-                            <td>{{notes.noteTitle}}</td>
-                            <td>{{notes.noteDesc}}</td>
-                            <td>{{notes.time}}</td>
-                            <td>
-                                <a href="delete_note/{{notes.id}}" class="btn btn-danger">Delete</a>
-                                <a href="update_note/{{notes.id}}" class="btn btn-primary">Update</a>
-                            </td>
-                            <td><a href="/updatebookmarks/{{notes.id}}" class="btn btn-warning">Remove from Bookmarks</a></td>
-                        </tr>
-                    {%endif%}
+                {%if notes.bookmark == 1 %}
+                <tr>
+                    <th scope="row">{{forloop.counter}}</th>
+                    <td>{{notes.noteTitle}}</td>
+                    <td>{{notes.noteDesc}}</td>
+                    <td>{{notes.time}}</td>
+                    <td>
+                        <a href="delete_note/{{notes.id}}" class="btn btn-danger">Delete</a>
+                        <a href="update_note/{{notes.id}}" class="btn btn-primary">Update</a>
+                    </td>
+                    <td><a href="/updatebookmarks/{{notes.id}}" class="btn btn-warning">Remove from Bookmarks</a></td>
+                </tr>
+                {%endif%}
                 {%endfor%}
             </tbody>
         </table>
