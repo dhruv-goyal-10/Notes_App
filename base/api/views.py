@@ -8,6 +8,7 @@ from .serializers import *
 @api_view(['GET'])
 def allNotes(request):
         Note = Addnote.objects.all()
+
         serializer = AddnoteSerializer(Note, many=True)
         return JsonResponse(serializer.data, safe=False)
 
@@ -32,7 +33,7 @@ def createNotes(request):
    serializer = AddnoteSerializer(data=request.data)
    if serializer.is_valid():
        serializer.save()
-   return JsonResponse(serializer.data, safe=False)
+   return JsonResponse(serializer.data)
 
 @api_view(['GET','PUT'])
 def updateNotes(request, pk):
