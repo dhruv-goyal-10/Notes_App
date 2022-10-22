@@ -7,5 +7,5 @@ class Addnote(models.Model):
     time= models.DateTimeField(auto_now_add= True) 
     bookmark = models.IntegerField(default=0)
 
-    def __str__(self):
+    def __str__(self): 
         return self.noteTitle
